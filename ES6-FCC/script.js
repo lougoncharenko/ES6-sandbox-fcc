@@ -146,5 +146,53 @@ console.log(howMany("string", null, [1, 2, 3], { }));
 console.log(arr3);
 
 //Use Destructuring Assignment to Extract Values from Objects
+const user={name: 'John Doe', age:35};
+const name=user.name;
+const age=user.age;
+console.log(name, age);
 
+
+//practice es5
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+  };
+
+//   const today=HIGH_TEMPERATURES.today;
+//   const tomorrow=HIGH_TEMPERATURES.tomorrow;
+
+
+  //practice es6
+  const {today, tomorrow}=HIGH_TEMPERATURES;
+  console.log(today);
+  console.log(tomorrow);
+
+
+  //Use Destructuring Assignment to Assign Variables from Objects
+  const { name: userName, age: userAge } = user;
+  const {today:highToday, tomorrow:highTomorrow} =HIGH_TEMPERATURES;
+
+  //Use Destructuring Assignment to Assign Variables from Nested Objects
+  const user2 = {
+    johnDoe: { 
+      age: 34,
+      email: 'johnDoe@freeCodeCamp.com'
+    }
+  };
+
+  const{johnDoe: {age, email}} =user2;
+  const {johnDoe: {age:userAge, email:userEmail}}=user2;
+
+  //practice
+  const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
+  };
+
+
+  const {today: {low:lowToday, high:highToday}}=LOCAL_FORECAST
+
+  //Use Destructuring Assignment to Assign Variables from Arrays
 
